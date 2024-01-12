@@ -1,0 +1,27 @@
+:root{    /*:root creates a global scope*/
+    --blue: blue; 
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/*https://chat.openai.com/c/d86aee60-923f-44b7-94eb-67024c1ddc90*/
+
+span p{
+    /*this <p> will take the same with as its container <span> if <span> have position:absolute */
+    --red: red;  /*This is a local scope*/
+    background-color: yellow;
+    color: var(--red);
+     width: 500px; 
+    /* position: absolute; */
+    /* transform: rotate(-30deg); */
+    text-align: center;
+}
+span{
+    background-color: aqua;
+    position: absolute;
+    height:500px; /*the height and width of an inline element cannot be set in css, you can change these properties if you use position:absolute*/
+}
